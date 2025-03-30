@@ -69,8 +69,8 @@
       </a>
       <ul>
         <li><a class="magic-underlined" href="#about">About</a></li>
-        <li><a class="magic-underlined" href="#experience">Projects</a></li>
-        <li><a class="magic-underlined" href="#what-i-can-do">Services</a></li>
+        <li><a class="magic-underlined" href="#experience">Services</a></li>
+        <li><a class="magic-underlined" href="#what-i-can-do">Projects</a></li>
         <li><a class="magic-underlined" href="#contacts">Contacts</a></li>
         <li><a class="magic-underlined" href="cv.html">Portfolio</a></li>
       </ul>
@@ -125,7 +125,7 @@
         </div>
       </section>
       <section id="experience">
-        <h2 class="section-title align-center uppercase">Projects</h2>
+        <h2 class="section-title align-center uppercase">Services</h2>
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 img-grid">
             <figure class="hide-totally">
@@ -206,7 +206,7 @@
         </div>
       </section>
       <section id="what-i-can-do">
-        <h2 class="section-title align-center uppercase">Our Services</h2>
+        <h2 class="section-title align-center uppercase">Our Projects</h2>
         <p class="align-center margin-v">
           We deliver transformative technology solutions designed to exceed
           expectations:
@@ -218,7 +218,7 @@
             <img
               src="images/gamedev.jpg"
               alt="Description"
-              style="width: 100%; max-width: 300px; height: auto"
+              style="width: 0%; max-width: 300px; height: auto"
             />
             <p class="hide-totally align-center">Innovative & Scalable</p>
           </div>
@@ -254,35 +254,69 @@
           </div>
         </div>
       </section>
+
       <section id="contacts" class="full">
         <h2 class="section-title align-center uppercase">Get in Touch</h2>
-        <div id="map-canvas" class="width-100"></div>
         <div class="map-main-marker intro-bg-color"></div>
         <div class="row">
-          <div
-            class="col-xs-12 col-sm-4 col-md-4 col-lg-4 align-center margin-v"
-          >
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 align-center margin-v">
             <i class="icon-mail-closed icon-circled"></i>
-            <p class="align-center hide-totally">contact@classyhorizon.com</p>
+            <p class="align-center hide-totally">
+              <a href="mailto:contact@classyhorizon.com">contact@classyhorizon.com</a>
+            </p>
           </div>
-          <div
-            class="col-xs-12 col-sm-4 col-md-4 col-lg-4 align-center margin-v"
-          >
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 align-center margin-v">
             <i class="icon-linkedin icon-circled"></i>
-            <p class="align-center hide-totally">LinkedIn: /ClassyHorizon</p>
+            <p class="align-center hide-totally">LinkedIn: <a href="https://www.linkedin.com/in/ClassyHorizon" target="_blank">/ClassyHorizon</a></p>
           </div>
-          <div
-            class="col-xs-12 col-sm-4 col-md-4 col-lg-4 align-center margin-v"
-          >
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 align-center margin-v">
             <i class="icon-phone icon-circled"></i>
             <p class="align-center hide-totally">+216 96 787 625</p>
           </div>
         </div>
       </section>
-      <section id="contact-form">
-        <h2 class="section-title align-center uppercase">Send Us a Message</h2>
-        <!-- Optional: Insert your contact form code here -->
-      </section>
+      
+
+
+
+
+
+      <section id="contact-form" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <h2 class="section-title align-center uppercase">CONTACT ME</h2>
+        <p>Have a project, a challenge, or an idea to share? I'm here to help.</p>
+        <form id="contactForm" style="width: 100%; max-width: 500px; display: flex; flex-direction: column; align-items: center;">
+            <div style="width: 100%;">
+                <input type="text" id="name" name="name" placeholder="Your Name" required style="width: 100%;">
+            </div>
+            <div style="width: 100%;">
+                <input type="text" id="email" name="email" placeholder="Your Email" required style="width: 100%;">
+                <p id="emailError" style="color: red; display: none;">Please enter a valid email address.</p>
+            </div>
+            <div style="width: 100%;">
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required style="width: 100%;"></textarea>
+            </div>
+            <button type="submit" class="send-message" style="margin-top: 10px;">Send Message</button>
+            <p id="successMessage" style="color: green; display: none;">Message sent successfully!</p>
+        </form>
+        <h3>Contact Info</h3>
+        <p>Looking to connect? I'm available for professional collaborations, innovative projects, or simply to expand my network. Let's get in touch!</p>
+        <ul style="list-style: none; padding: 0;">
+            <li><strong>Email:</strong> <span>Mansri MohamedAmin</span></li>
+            <li><strong>Phone:</strong> +214 26 020 456</li>
+            <li><strong>Address:</strong> 23 Rue de solidarité, La Marsa, Tunis, Tunisia</li>
+        </ul>
+        <p>Visit my social profile and get connected</p>
+        <div class="social-links" style="display: flex; gap: 10px; justify-content: center;">
+            <a href="#" class="linkedin">LinkedIn</a>
+            <a href="#" class="github">GitHub</a>
+            <a href="#" class="email">Email</a>
+        </div>
+    </section>
+    
+    
+    
+    
+
     </div>
     <div class="msg-confirm-wrapper">
       <div class="msg-confirm">
@@ -298,5 +332,53 @@
     <script src="js/portfolio.animations.js"></script>
     <script src="js/portfolio.animations.background.js"></script>
     <script src="js/portfolio.maps.js"></script>
+    <script>
+      function validateForm() {
+          var emailField = document.getElementById("email");
+          var emailError = document.getElementById("emailError");
+          if (!emailField || !emailError) return false;
+          
+          var email = emailField.value;
+          var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          
+          if (!emailPattern.test(email)) {
+              emailError.style.display = "block";
+              return false;
+          } else {
+              emailError.style.display = "none";
+              return true;
+          }
+      }
+  
+      document.addEventListener("DOMContentLoaded", function () {
+          var form = document.getElementById("contactForm");
+          var successMessage = document.getElementById("successMessage");
+          
+          if (!form || !successMessage) return;
+  
+          form.addEventListener("submit", function(event) {
+              event.preventDefault(); // Prevents form submission
+              if (validateForm()) {
+                  var formData = new FormData(this);
+                  fetch("https://formspree.io/f/xpwpjyej", {
+                      method: "POST",
+                      body: formData,
+                      headers: {
+                          "Accept": "application/json"
+                      }
+                  }).then(response => {
+                      if (response.ok) {
+                          successMessage.style.display = "block";
+                          form.reset();
+                      } else {
+                          alert("There was a problem sending your message. Please try again.");
+                      }
+                  }).catch(error => {
+                      alert("Error: " + error.message);
+                  });
+              }
+          });
+      });
+  </script>
   </body>
 </html>
