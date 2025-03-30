@@ -14,8 +14,45 @@
     <title>Classy Horizon | Shaping Tomorrow's Technology</title>
     <link rel="shortcut icon" href="images/favicon.png" />
     <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
+    <style>
+      /* Ensure the intro section is positioned relatively to contain the absolutely positioned logo */
+      #intro {
+        position: relative;
+      }
+    
+      .logo-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        text-align: center; /* Optional: Center the text by default */
+      }
+    
+      .logo-container img {
+        max-width: 400px;
+        height: auto;
+      }
+    
+      .logo-container p {
+        position: relative;
+        top: 100%; /* Position it below the logo (can be adjusted) */
+        left: 50%;
+        transform: translateX(-40%);
+        margin-top: 10px; /* Space between the logo and the text */
+        font-size: 1.5em;
+        color: #fff; /* White text */
+        font-family: Arial, sans-serif;
+      }
+    </style>
+    
+    
+    <body>
+      <div class="logo-container">
+        <img src="images/logo.png" alt="Classy Horizon Logo" />
+        <p>Tech Excellence with a Classy Touch</p> <!-- Added text under the logo -->
+      </div>
+
     <nav id="nav">
       <a href="#" id="menu-toggle" class="hidden-md hidden-lg">
         <span class="menu-line"></span>
@@ -41,9 +78,9 @@
             We merge art with science to transform bold ideas into breakthrough
             solutions.
           </p>
-          <a href="#contacts" class="magic-underlined btn-cta hide-totally"
-            >Start Your Journey</a
-          >
+          <a href="#contacts" class="magic-underlined btn-cta hide-totally">
+            Start Your Journey
+          </a>
         </div>
       </section>
       <section id="about">
@@ -108,10 +145,7 @@
               <figcaption>
                 <div class="caption-wrapper">
                   <h5>
-                    <a
-                      class="magic-underlined"
-                      href="http://www.elco.it"
-                      target="_blank"
+                    <a class="magic-underlined" href="#" target="_blank"
                       >Next-Gen IoT Integration</a
                     ><br />
                     Smart Devices & Connected Ecosystems
@@ -132,10 +166,7 @@
               <figcaption>
                 <div class="caption-wrapper">
                   <h5>
-                    <a
-                      class="magic-underlined"
-                      href="http://www.gisdata.it/"
-                      target="_blank"
+                    <a class="magic-underlined" href="#" target="_blank"
                       >Digital Platform Mastery</a
                     ><br />
                     Crafting Seamless Web & Mobile Experiences
@@ -154,10 +185,7 @@
               <figcaption>
                 <div class="caption-wrapper">
                   <h5>
-                    <a
-                      class="magic-underlined"
-                      href="http://www.lecafeanglais.co.uk/"
-                      target="_blank"
+                    <a class="magic-underlined" href="#" target="_blank"
                       >Immersive Game Development</a
                     ><br />
                     Interactive Experiences Redefined
@@ -178,7 +206,11 @@
           <div
             class="col-xs-12 col-sm-6 col-md-4 col-lg-4 margin-v align-center"
           >
-            <i class="icon-chronometer icon-circled"></i>
+            <img
+              src="images/gamedev.jpg"
+              alt="Description"
+              style="width: 100%; max-width: 300px; height: auto"
+            />
             <p class="hide-totally align-center">Innovative & Scalable</p>
           </div>
           <div
@@ -234,7 +266,7 @@
             class="col-xs-12 col-sm-4 col-md-4 col-lg-4 align-center margin-v"
           >
             <i class="icon-phone icon-circled"></i>
-            <p class="align-center hide-totally">+1 234 567 890</p>
+            <p class="align-center hide-totally">+216 96 787 625</p>
           </div>
         </div>
       </section>
