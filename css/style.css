@@ -2048,3 +2048,55 @@ body.page-404 {
     transform: translate(-50%, -50%); }
 
 /*# sourceMappingURL=style.css.map */
+
+/* Ensure the intro section is positioned relatively to contain the absolutely positioned logo */
+#intro {
+  position: relative;
+}
+
+.logo-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  text-align: center; /* Optional: Center the text by default */
+}
+
+.logo-container img {
+  max-width: 400px;
+  height: auto;
+}
+
+.logo-container p {
+  position: relative;
+  top: 100%; /* Position it below the logo (can be adjusted) */
+  left: 50%;
+  transform: translateX(-40%);
+  margin-top: 10px; /* Space between the logo and the text */
+  font-size: 1.5em;
+  color: #fff; /* White text */
+  font-family: Arial, sans-serif;
+}
+.large-text {
+  font-size: 3em; /* Adjust the size of the text */
+  font-weight: bold;
+  text-align: center; /* Center the text */
+  color: #fff; /* White color for the text */
+  margin-bottom: 20px; /* Space below the text */
+  font-family: Arial, sans-serif;
+}
+.social-links {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.social-links a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

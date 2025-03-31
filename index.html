@@ -14,64 +14,13 @@
     <title>Classy Horizon | Shaping Tomorrow's Technology</title>
     <link rel="shortcut icon" href="images/favicon.png" />
     <link rel="stylesheet" href="css/style.css" />
-    <!-- Font Awesome for icons -->
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
+    <!-- Font Awesome for icons using the official CDN -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KrE+ldgWcIhgu+bi7rC1r3xC7ILH+IZh7n0Wv+0I4r+0Ra3"
       crossorigin="anonymous"
-    ></script>
-    <style>
-      /* Ensure the intro section is positioned relatively to contain the absolutely positioned logo */
-      #intro {
-        position: relative;
-      }
-
-      .logo-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1000;
-        text-align: center; /* Optional: Center the text by default */
-      }
-
-      .logo-container img {
-        max-width: 400px;
-        height: auto;
-      }
-
-      .logo-container p {
-        position: relative;
-        top: 100%; /* Position it below the logo (can be adjusted) */
-        left: 50%;
-        transform: translateX(-40%);
-        margin-top: 10px; /* Space between the logo and the text */
-        font-size: 1.5em;
-        color: #fff; /* White text */
-        font-family: Arial, sans-serif;
-      }
-      .large-text {
-        font-size: 3em; /* Adjust the size of the text */
-        font-weight: bold;
-        text-align: center; /* Center the text */
-        color: #fff; /* White color for the text */
-        margin-bottom: 20px; /* Space below the text */
-        font-family: Arial, sans-serif;
-      }
-      .social-links {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        align-items: center;
-      }
-      .social-links a {
-        text-decoration: none;
-        color: inherit;
-        font-size: 18px;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-      }
-    </style>
+    />
   </head>
   <body>
     <div class="logo-container">
@@ -410,57 +359,6 @@
     <script src="js/portfolio.animations.js"></script>
     <script src="js/portfolio.animations.background.js"></script>
     <script src="js/portfolio.maps.js"></script>
-    <script>
-      function validateForm() {
-        var emailField = document.getElementById("email");
-        var emailError = document.getElementById("emailError");
-        if (!emailField || !emailError) return false;
-
-        var email = emailField.value;
-        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (!emailPattern.test(email)) {
-          emailError.style.display = "block";
-          return false;
-        } else {
-          emailError.style.display = "none";
-          return true;
-        }
-      }
-
-      document.addEventListener("DOMContentLoaded", function () {
-        var form = document.getElementById("contactForm");
-        var successMessage = document.getElementById("successMessage");
-
-        if (!form || !successMessage) return;
-
-        form.addEventListener("submit", function (event) {
-          event.preventDefault(); // Prevents form submission
-          if (validateForm()) {
-            var formData = new FormData(this);
-            fetch("https://formspree.io/f/xpwpjyej", {
-              method: "POST",
-              body: formData,
-              headers: {
-                Accept: "application/json",
-              },
-            })
-              .then((response) => {
-                if (response.ok) {
-                  successMessage.style.display = "block";
-                  form.reset();
-                } else {
-                  alert(
-                    "There was a problem sending your message. Please try again."
-                  );
-                }
-              })
-              .catch((error) => {
-                alert("Error: " + error.message);
-              });
-          }
-        });
-      });
-    </script>
+    <script src="js/contactForm.js"></script>
   </body>
 </html>
