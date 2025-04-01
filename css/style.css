@@ -1527,9 +1527,12 @@ label {
 
 input[type="text"], textarea {
   border: none;
-  border-bottom: 2px solid #101010;
+  /*border-bottom: 2px solid #101010;*/
   margin-top: 0;
-  padding: 10px 2px; }
+  padding: 10px 2%;
+  margin: 8px 3%; 
+  background-color: #e5fffc;
+  border-radius: 8px 8px 8px 8px;}
 
 input[type="text"], textarea {
   max-width: 450px; }
@@ -1847,6 +1850,17 @@ nav {
     float: right;
     letter-spacing: 2px; }
     @media screen and (max-width: 991px) {
+      .logo-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        
+        text-align: center; /* Optional: Center the text by default */
+      }
+      
+      
       nav #my-name {
         margin-top: 30px; } }
 
