@@ -2108,7 +2108,7 @@ body.page-404 {
 }
 .social-links a {
   text-decoration: none;
-  color: inherit;
+  color: #E5FFFC ;
   font-size: 18px;
   display: flex;
   align-items: center;
@@ -2133,6 +2133,8 @@ body {
   font-size: 2em;
   margin-bottom: 10px;
 }
+
+
 
 .align-center {
   text-align: center;
