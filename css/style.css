@@ -1865,20 +1865,21 @@ nav {
         height: auto; 
         position: absolute;
         top: -180%;
-        left: -25%;}
+        right: -27%;
+        /*left: 50%;*/}
       
 
       .logo-container p {
         position: relative !important;
         left: 40% !important;
         width: 180% !important;
-        margin-top: 30px !important;
+        margin-top: 40px !important;
       }
       
       }
 
       nav #my-name {
-        margin-top: 30px; } }
+        margin-top: 30px; }   
 
 #menu-toggle {
   float: left; }
