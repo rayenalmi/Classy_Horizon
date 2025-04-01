@@ -1860,7 +1860,23 @@ nav {
         text-align: center; /* Optional: Center the text by default */
       }
       
+      .logo-container img {
+        width: 150%;
+        height: auto; 
+        position: absolute;
+        top: -180%;
+        left: -25%;}
       
+
+      .logo-container p {
+        position: relative !important;
+        left: 40% !important;
+        width: 180% !important;
+        margin-top: 30px !important;
+      }
+      
+      }
+
       nav #my-name {
         margin-top: 30px; } }
 
@@ -2075,6 +2091,7 @@ body.page-404 {
   transform: translate(-50%, -50%);
   z-index: 1000;
   text-align: center; /* Optional: Center the text by default */
+
 }
 
 .logo-container img {
