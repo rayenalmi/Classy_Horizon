@@ -2711,22 +2711,21 @@ nav #my-name {
   margin: 0;
   padding: 0;
 }
-/*
 .wrapper #intro {
-  background: #101010 url('../images/bg.jpg') center center no-repeat scroll;
+  background: #101010 url("../images/bg.jpg") center center no-repeat scroll;
   background-size: cover;
   margin-top: 0;
 }
-*/
 
-.wrapper #intro {
+/*.wrapper #intro {
   background: #101010 url(../images/bg.jpg) center center no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   margin-top: 0;
-}
+}*/
+
 .wrapper #intro .intro-text-wrapper {
   left: 50%;
   position: absolute;
