@@ -2677,12 +2677,18 @@ nav #my-name {
 }
 
 #map-canvas {
-  height: 450px;
+  width: 100%; /* Full width on all screen sizes */
+  height: 450px; /* You can adjust height as needed */
+  margin: 0 auto; /* Center horizontally if needed */
+  display: block; /* Ensures it behaves predictably */
+  max-width: 100%; /* Prevent overflow */
+  box-sizing: border-box;
 }
-@media screen and (max-width: 991px) {
+
+/* Optional: Adjust height on smaller screens if needed */
+@media screen and (max-width: 600px) {
   #map-canvas {
-    margin-left: 0;
-    margin-right: 0;
+    height: 300px; /* Reduce height for very small screens */
   }
 }
 
