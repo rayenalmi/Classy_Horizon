@@ -2677,18 +2677,32 @@ nav #my-name {
 }
 
 #map-canvas {
-  width: 100%; /* Full width on all screen sizes */
-  height: 450px; /* You can adjust height as needed */
-  margin: 0 auto; /* Center horizontally if needed */
-  display: block; /* Ensures it behaves predictably */
-  max-width: 100%; /* Prevent overflow */
+  width: 100%;
+  height: 50vh; /* Responsive height: 50% of viewport height */
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
-/* Optional: Adjust height on smaller screens if needed */
-@media screen and (max-width: 600px) {
+/* Small devices (phones < 400px wide) */
+@media screen and (max-width: 400px) {
   #map-canvas {
-    height: 300px; /* Reduce height for very small screens */
+    height: 40vh;
+  }
+}
+
+/* Medium devices (tablets/small desktops) */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  #map-canvas {
+    height: 60vh;
+  }
+}
+
+/* Large desktops */
+@media screen and (min-width: 1025px) {
+  #map-canvas {
+    height: 70vh;
   }
 }
 
@@ -2697,6 +2711,14 @@ nav #my-name {
   margin: 0;
   padding: 0;
 }
+/*
+.wrapper #intro {
+  background: #101010 url('../images/bg.jpg') center center no-repeat scroll;
+  background-size: cover;
+  margin-top: 0;
+}
+*/
+
 .wrapper #intro {
   background: #101010 url(../images/bg.jpg) center center no-repeat fixed;
   -webkit-background-size: cover;

@@ -36,6 +36,29 @@
 
       gtag("config", "G-ZSXGYQE7KF");
     </script>
+
+    <!-- Preload the LCP background -->
+    <link
+      rel="preload"
+      as="image"
+      href="/images/bg.jpg"
+      type="image/jpeg"
+      crossorigin
+    />
+    <!-- Critical CSS for #intro -->
+    <style>
+      section#intro {
+        background-color: #101010;
+        background-image: url("/images/bg.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        /* Reserve exact height to avoid layout shift */
+        height: 940px;
+        min-height: 940px;
+        margin-top: 0;
+      }
+    </style>
   </head>
   <body>
     <div id="Home" class="logo-container">
