@@ -2712,7 +2712,7 @@ nav #my-name {
   padding: 0;
 }
 .wrapper #intro {
-  background: #101010 url("../images/bg.jpg") center center no-repeat scroll;
+  background: #101010 url("../images/bg.jpg") center center no-repeat fixed;
   background-size: cover;
   margin-top: 0;
 }
